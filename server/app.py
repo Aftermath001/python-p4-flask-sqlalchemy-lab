@@ -19,8 +19,9 @@ def home():
 
 @app.route('/animal/<int:id>')
 def animal_by_id(id):
+    animal = Animal.query.filter(Animal.id == id).first()
     return ''
-
+   
 @app.route('/zookeeper/<int:id>')
 def zookeeper_by_id(id):
     return ''
